@@ -6,11 +6,14 @@ AF_DCMotor motor_right(3);
 void setup() {
   Serial.begin(9600);
   Serial.println("Serial initialized");
-  motor_left.setSpeed(244);
+  motor_left.setSpeed(255);
   motor_left.run(RELEASE);
   motor_right.setSpeed(255);
   motor_right.run(RELEASE);
-  pinMode(A0, INPUT);
+  
+  pinMode(A0, INPUT); // CTRL PORT
+
+  // MOTOR PORTS
   pinMode(A1, INPUT);
   pinMode(A2, INPUT);
   pinMode(A3, INPUT);
